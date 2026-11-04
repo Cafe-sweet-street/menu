@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafe Sweet Street · Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caveat:wght@600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--rd:#d6402f;--my:#f2b632;--tl:#1f7a70;--gn:#3f7d4e;--bd:#272b2c;--kr:#ead3b0;--br:#3b2a1e;--ch:#f6f1e4}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{font-family:'Nunito','Trebuchet MS',sans-serif;color:var(--ch);background-color:var(--bd);background-image:radial-gradient(rgba(255,255,255,.07) 1.5px,transparent 2px),radial-gradient(rgba(255,255,255,.05) 1px,transparent 1.5px);background-size:34px 34px,19px 19px;background-position:0 0,11px 9px}
+header{text-align:center;padding:0 14px 34px;border-bottom:8px solid var(--kr)}
+.bulbs{display:flex;justify-content:space-evenly;border-top:3px solid #555;margin:0 -14px 14px}
+.bulbs i{display:block;width:22px}
+.bulbs i::before{content:"";display:block;width:2px;height:18px;background:#555;margin:0 auto}
+.bulbs i::after{content:"";display:block;width:22px;height:30px;border-radius:50% 50% 46% 46%;background:radial-gradient(#fffbe0,#ffd45a);box-shadow:0 0 20px 8px rgba(255,212,90,.5)}
+.bulbs i:nth-child(even)::before{height:34px}
+h1{font-family:'Amatic SC','Arial Narrow',sans-serif;font-weight:700;font-size:clamp(4.2rem,17vw,9rem);line-height:.9;color:#fff;letter-spacing:.02em;margin-top:8px}
+h1 span:nth-child(2){color:var(--my)}h1 span:nth-child(3){color:var(--rd)}
+.tag{font-family:'Caveat',cursive;font-size:clamp(1.5rem,5vw,2.2rem);color:var(--ch);margin-top:8px}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.dots b{width:14px;height:14px;border-radius:50%}
+.dots b:nth-child(4n+1){background:var(--rd)}.dots b:nth-child(4n+2){background:var(--my)}.dots b:nth-child(4n+3){background:#38b2a3}.dots b:nth-child(4n+4){background:#6dbb7f}
+nav{position:sticky;top:0;z-index:9;display:flex;gap:8px;overflow-x:auto;padding:10px 12px;background:#1b1e1f;border-bottom:3px dashed var(--kr);scrollbar-width:none}
+nav a{flex:0 0 auto;text-decoration:none;font-weight:800;padding:7px 15px;border-radius:30px;background:var(--my);color:var(--br);white-space:nowrap}
+nav a:nth-child(4n+3){background:var(--rd);color:#fff}nav a:nth-child(4n+4){background:#38b2a3;color:#0d2b27}nav a:nth-child(4n+5){background:#6dbb7f;color:#10301a}
+nav a:hover,nav a:focus-visible{outline:3px solid #fff}
+.lang{position:sticky;left:0;z-index:2;display:flex;gap:4px;flex:0 0 auto;background:#1b1e1f;padding-right:8px}
+.lang button{border:2px solid var(--kr);background:transparent;color:var(--kr);font:inherit;font-weight:800;padding:5px 12px;border-radius:30px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--kr);color:var(--br)}
+main{max-width:1100px;margin:0 auto;padding:6px 14px 40px}
+section{margin-top:38px}
+h2{font-family:'Amatic SC','Arial Narrow',sans-serif;font-weight:700;font-size:clamp(2.6rem,9vw,4.2rem);text-align:center;color:#fff;line-height:1;text-decoration:underline wavy var(--my);text-decoration-thickness:3px;text-underline-offset:10px;margin-bottom:24px}
+.cols{columns:2 340px;column-gap:22px}
+.cd{break-inside:avoid;background:var(--kr);color:var(--br);border-radius:14px;margin:0 0 22px;box-shadow:6px 6px 0 rgba(0,0,0,.45);overflow:hidden;outline:2px dashed var(--k);outline-offset:-8px}
+.cd:nth-child(4n+1){--k:var(--rd);--kt:#fff}.cd:nth-child(4n+2){--k:var(--my);--kt:var(--br)}.cd:nth-child(4n+3){--k:var(--tl);--kt:#fff}.cd:nth-child(4n+4){--k:var(--gn);--kt:#fff}
+.cd h3{background:var(--k);color:var(--kt);font-family:'Amatic SC','Arial Narrow',sans-serif;font-weight:700;font-size:1.9rem;line-height:1;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;letter-spacing:.03em}
+.cd h3 em{font-style:normal;background:#fff;color:var(--rd);font-family:'Nunito',sans-serif;font-size:1rem;font-weight:800;padding:3px 12px;border-radius:20px;white-space:nowrap}
+.nt{padding:12px 20px 2px;font-size:.9rem;font-style:italic;color:#5a4330}
+.it{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 20px;border-bottom:1px dashed rgba(59,42,30,.35)}
+.it:last-child{border-bottom:0;padding-bottom:14px}
+.nm{font-weight:800}.ds{font-size:.86rem;color:#5a4330;margin-top:1px}
+.pw{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.pr{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.ch{display:flex;flex-direction:column;align-items:center;min-width:48px;background:#fff;border-radius:10px;padding:2px 9px;white-space:nowrap;box-shadow:0 2px 0 rgba(59,42,30,.25)}
+.ch i{font-style:normal;font-size:.66rem;font-weight:800;color:var(--tl);text-transform:uppercase}
+.ch b{color:#b8301f;font-size:.98rem}
+footer{background:var(--kr);color:var(--br);text-align:center;padding:26px 16px 30px;border-top:8px solid var(--rd)}
+footer h2{color:var(--br);text-decoration-color:var(--rd);margin-bottom:12px}
+.fine{font-size:.9rem;max-width:620px;margin:6px auto 0;font-weight:700}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bulbs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <h1><span>Cafe</span> <span>Sweet</span> <span>Street</span></h1>
+  <p class="tag" data-es="Huevos de granja · Ensaladas frescas · Pollo de libre pastoreo">Farm eggs · Fresh salads · Free-range chicken</p>
+  <div class="dots" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+</header>
+<nav id="nav"></nav>
+<main id="menu"></main>
+<footer>
+  <h2 data-es="¡Buen provecho!">Come hungry, leave happy!</h2>
+  <p class="fine" data-es="Salpicamos nuestro pollo Bell &amp; Evans en salmuera · Lechugas orgánicas de Farmer Wayne’s · Epic Acre Farms">We brine our Bell &amp; Evans chicken · Organic greens from Farmer Wayne’s · Epic Acre Farms</p>
+</footer>
+
+<script>
+const z=(a,b)=>[a,b];
+const D=[
+{id:"breakfast",ic:"🥐",t:z("Breakfast","Desayuno"),g:[
+ {n:z("From the Bakery","De la Panadería"),i:[
+  [z("Fresh Baked Croissants","Croissants Recién Horneados"),"2.50",z("Butter, whole grain","Mantequilla, integral")],
+  [z("NY Style Bagels","Bagels Estilo Nueva York"),"2.00",z("Cream cheese, cheddar, butter · peanut butter + $1","Queso crema, cheddar, mantequilla · mantequilla de maní + $1")],
+  [z("Oven Fresh Scones","Scones Recién Salidos del Horno"),"2.00",z("Check in daily for varieties","Pregunta por los sabores del día")],
+  [z("Fresh Baked Cookies","Galletas Recién Horneadas"),"2.25"]]},
+ {n:z("Eggs","Huevos"),i:[
+  [z("Cafe Omelet","Omelet del Café"),"7.50",z("3 farm eggs & your choice of 2 fresh ingredients · extras $1 · egg whites + $2.50","3 huevos de granja y 2 ingredientes frescos a tu elección · extras $1 · claras + $2.50")],
+  [z("Just An Egg","Solo un Huevo"),"1.50",z("Scrambled or fried farm egg à la carte","Huevo de granja revuelto o frito, por separado")]]},
+ {n:z("Build Your Farm Egg Sandwich","Arma tu Sándwich de Huevo"),note:z("Pick what you like and stack it up.","Elige lo que te guste y arma tu sándwich."),i:[
+  [z("Farm egg","Huevo de granja"),"1.50"],[z("Croissant","Croissant"),"2.50"],["Bagel","2.00"],[z("English muffin & wheat toast","Muffin inglés y pan tostado integral"),"1.50"],[z("Cheese","Queso"),"1.00"],[z("Bacon, sausage or ham","Tocino, salchicha o jamón"),"1.50"],[z("Avocado","Aguacate")]]},
+ {n:z("Crispy Potato Skillets","Sartenes de Papa Crujiente"),i:[
+  ["Cheeseburger","9.00",z("Burger, cheese sauce, fried egg, ketchup, bacon, onion","Hamburguesa, salsa de queso, huevo frito, cátsup, tocino y cebolla")],
+  [z("Sausage & Pepper","Salchicha y Pimiento"),"8.00",z("Sausage crumble, green & jalapeño peppers, mozzarella, fried egg","Salchicha desmenuzada, pimientos verdes y jalapeños, mozzarella y huevo frito")]]},
+ {n:z("Sweet Street Savory Wraps","Wraps Salados Sweet Street"),p:z("$6 each","$6 cada uno"),i:[
+  ["Mediterranean","",z("Egg custard with kale, roasted red peppers, onion, feta and herbs","Natilla de huevo con kale, pimientos rojos asados, cebolla, feta y hierbas")],
+  ["Chilaquiles","",z("Savory cheesecake, corn chips, salsa verde, garlic, scallions and roasted red peppers","Cheesecake salado, totopos, salsa verde, ajo, cebollín y pimientos rojos asados")]]},
+ {n:z("Chalkboard Wraps","Wraps de la Pizarra"),note:z("As seen on our chalkboard. Ask for today’s price.","Los de nuestra pizarra. Pregunta el precio del día."),i:[
+  [z("Cinnamon Cream Cheese Swirl Wrap","Wrap de Queso Crema y Canela"),"",z("Cinnamon cream cheese, bread pudding, pastry leaf","Queso crema con canela, pudín de pan y hojaldre")],
+  [z("Southwest Salsa Verde Wrap","Wrap Southwest de Salsa Verde"),"",z("Tomatillos, peppers, onions, 3 cheese, salsa verde","Tomatillos, pimientos, cebolla, 3 quesos y salsa verde")]]},
+ {n:z("Cold Options","Opciones Frías"),i:[
+  [z("Seasonal fresh cut fruit salad","Ensalada de fruta fresca de temporada"),"3.75"],[z("Bowl of granola with skim milk","Tazón de granola con leche descremada"),"5.00"],[z("Fruit & yogurt parfait","Parfait de fruta y yogurt"),"12 oz 5.75|16 oz 7.50"]]}]},
+{id:"burger",ic:"🍔",t:z("Build Your Own Burger","Arma tu Hamburguesa"),g:[
+ {n:z("Build Your Own Burger","Arma tu Hamburguesa"),p:"$12",note:z("Four easy steps. Make it yours!","Cuatro pasos fáciles. ¡Hazla a tu manera!"),i:[
+  [z("Your burger, your way","Tu hamburguesa, a tu manera"),"12.00"]]},
+ {n:z("1 · Bun (choose one)","1 · Pan (elige uno)"),i:[["Brioche"],[z("Whole grain","Integral")],[z("Gluten-free","Sin gluten")]]},
+ {n:z("2 · Protein (choose one)","2 · Proteína (elige una)"),i:[
+  [z("6 oz D&H beef burger","Hamburguesa de res D&H de 6 oz")],[z("6 oz house-made turkey burger","Hamburguesa de pavo casera de 6 oz")],[z("Grilled chicken","Pollo a la parrilla")],[z("Chipotle black bean veggie burger","Hamburguesa vegetariana de frijol negro y chipotle")]]},
+ {n:z("3 · Cheese (choose one)","3 · Queso (elige uno)"),note:z("Extras $1","Extras $1"),i:[
+  [z("American","Americano")],["Pepper jack"],[z("Bleu","Azul")],[z("Goat","Cabra")],[z("Swiss","Suizo")],["Provolone"],["Cheddar"]]},
+ {n:z("4 · Toppings","4 · Toppings"),i:[
+  [z("Tomato","Tomate")],[z("Lettuce","Lechuga")],[z("Pickles","Pepinillos")],[z("Sautéed onions","Cebolla salteada")],[z("Sautéed mushrooms","Champiñones salteados")],[z("Onions","Cebolla")],[z("Mushrooms","Champiñones")],[z("Bacon","Tocino"),"+1.00"]]}]},
+{id:"starters",ic:"🍟",t:z("Starters & Things","Para Empezar"),g:[
+ {n:z("Starters & Things","Para Empezar"),i:[
+  [z("Wings","Alitas"),"11.00",z("Bell & Evans free-range wings tossed in medium buffalo wing butter, house-made BBQ sauce, or garlic parmesan · served hot & crispy","Alitas de pollo de libre pastoreo Bell & Evans con mantequilla buffalo media, salsa BBQ casera o ajo y parmesano · calientes y crujientes")],
+  ["Hot Dog","3.75",z("Add cheese + $1 and/or bacon + $1","Con queso + $1 y/o tocino + $1")],
+  [z("Grandma’s Chicken Noodle Soup","Sopa de Pollo con Fideos de la Abuela"),"5.00",z("House-roasted Bell & Evans chicken, Pennsylvania Dutch spaetzle noodles. Grandma would approve!","Pollo Bell & Evans asado en casa y fideos spaetzle de Pennsylvania Dutch. ¡La abuela lo aprobaría!")],
+  [z("World Famous French Fries","Papas Fritas Famosas"),"5.00",z("Hand-cut russet potato, double fried and seasoned to perfection · add cheese + $1 and/or bacon + $1 · baby fries $3","Papa russet cortada a mano, doble fritura y sazonadas · con queso + $1 y/o tocino + $1 · porción chica $3")],
+  [z("Mac & Cheese","Macarrones con Queso"),"6.50",z("Elbows in a creamy blend of Cooper cheddar and sharp provolone, topped with roasted parmesan panko crumbs","Coditos en salsa cremosa de cheddar Cooper y provolone, con migas de panko y parmesano tostado")],
+  [z("Handcrafted Pretzel","Pretzel Artesanal"),"5.00",z("Choose ham & sweet cheese, turkey & havarti, sausage & cheddar, or spinach & feta · with wasabi honey mustard","Elige jamón y queso dulce, pavo y havarti, salchicha y cheddar, o espinaca y feta · con mostaza de miel y wasabi")],
+  [z("Fruit & Granola Yogurt Parfait","Parfait de Fruta, Granola y Yogurt"),"12 oz 5.75|16 oz 7.50",z("Fresh cut fruit with vanilla yogurt layered with granola, nuts & honey","Fruta fresca con yogurt de vainilla en capas con granola, nueces y miel")]]}]},
+{id:"entrees",ic:"🥪",t:z("Entrées & Sandwiches","Platos y Sándwiches"),g:[
+ {n:z("Entrées","Platos"),i:[
+  [z("Fish Tacos!","¡Tacos de Pescado!"),"10.00",z("Three tacos with crispy beer-battered cod, zesty house pico slaw & chipotle ranch in grilled corn tortillas. We build them here or send them home deconstructed","Tres tacos de bacalao empanizado con cerveza, pico slaw de la casa y ranch chipotle en tortillas de maíz asadas. Los armamos aquí o te los llevas desarmados")],
+  ["Philly Cheesesteak","11.00",z("Thin-shaved steak grilled with onions & mushrooms, on a hard roll with provolone & Cheez Whiz, South Street style","Steak en rebanadas finas con cebolla y champiñones en pan duro con provolone y Cheez Whiz, estilo South Street")],
+  [z("California Turkey Sandwich","Sándwich California de Pavo"),"9.00",z("Smoked turkey, avocado, sweet pea shoots & roasted red pepper pesto on a grilled whole grain roll","Pavo ahumado, aguacate, brotes de chícharo y pesto de pimiento rojo asado en pan integral a la parrilla")],
+  ["BLT Club","7.50",z("Apple wood smoked bacon, juicy tomatoes, crisp romaine and thin-sliced turkey on toasted honey wheat with mayo","Tocino ahumado en manzano, tomates jugosos, lechuga romana y pavo en rebanadas finas en pan de trigo y miel tostado con mayonesa")],
+  [z("Egg Salad on a Croissant","Ensalada de Huevo en Croissant"),"7.50",z("Hard-boiled egg, mayo, celery & a hint of Dijon on a toasted croissant, with diced bell pepper over salad greens","Huevo cocido, mayonesa, apio y un toque de Dijon en croissant tostado, con pimiento sobre lechugas")],
+  [z("Lamb Gyro","Gyro de Cordero"),"8.50",z("Grilled seasoned lamb, tomato, onion & house-made Greek-style tzatziki rolled in grilled pita","Cordero sazonado a la parrilla, tomate, cebolla y tzatziki griego casero en pita asada")],
+  [z("Falafel Sandwich","Sándwich de Falafel"),"8.50",z("Crispy falafel, lettuce, tomato, feta, fresh tzatziki & hummus rolled in authentic flour pita","Falafel crujiente, lechuga, tomate, feta, tzatziki fresco y hummus en pita de harina auténtica")],
+  [z("Almond Sourdough Pretzel Tenders","Tiras de Pollo con Pretzel de Masa Madre y Almendra"),"10.00",z("Bell & Evans free-range chicken tenders in a crunchy nutty coating, fried to excellence, with spicy honey mustard","Tiras de pollo Bell & Evans con cobertura crujiente de almendra, con mostaza de miel picante")],
+  [z("Cuban Sandwich","Sándwich Cubano"),"8.00",z("Slow-roasted marinated pork, baked ham, dill pickles & Swiss with mayo & mustard on a hard roll, grilled on the flat top","Cerdo marinado asado lento, jamón, pepinillos y queso suizo con mayonesa y mostaza en pan duro, a la plancha")]]}]},
+{id:"salads",ic:"🥗",t:z("Salads","Ensaladas"),g:[
+ {n:z("House Salads","Ensaladas de la Casa"),i:[
+  [z("Chinois Chicken Salad","Ensalada China de Pollo"),"11.00",z("Pulled oven-roasted chicken, napa & red cabbage, romaine, snow peas, carrot, Thai basil, honey roasted peanuts, sesame seeds, wontons, ginger sesame dressing","Pollo asado desmenuzado, col napa y morada, romana, chícharos, zanahoria, albahaca tailandesa, cacahuates con miel, ajonjolí y wontons, aderezo de jengibre y sésamo")],
+  [z("Southwest Salad","Ensalada Southwest"),"11.00",z("Tequila-lime chicken, black beans, fire-roasted corn, pico, cheddar jack, avocado, tortilla strips, chipotle ranch","Pollo con tequila y limón, frijol negro, elote asado, pico de gallo, cheddar jack, aguacate, tiras de tortilla y ranch chipotle")],
+  [z("Orchard Salad","Ensalada Orchard"),"10.00",z("Crisp romaine, Swiss, apples, pears, dried cranberries, toasted almonds, grilled chicken, lemon poppy seed vinaigrette","Lechuga romana, queso suizo, manzana, pera, arándanos secos, almendras tostadas, pollo a la parrilla y vinagreta de limón y amapola")],
+  [z("Cobb Salad","Ensalada Cobb"),"8.50",z("House greens, diced tomato, avocado, hard-boiled egg, bleu cheese crumble, bacon, carrots, grilled chicken & pea shoots, zesty bleu cheese dressing","Lechugas de la casa, tomate, aguacate, huevo cocido, queso azul, tocino, zanahoria, pollo a la parrilla y brotes de chícharo, aderezo de queso azul")],
+  [z("Dried Cranberry Goat Cheese Salad","Ensalada de Arándano y Queso de Cabra"),"8.00",z("Dried cranberries, candied walnuts, goat cheese crumbles & prosciutto on greens, balsamic vinaigrette","Arándanos secos, nueces confitadas, queso de cabra y prosciutto sobre lechugas, vinagreta balsámica")],
+  [z("Classic Caesar","César Clásica"),"9.00",z("Romaine, shaved parmesan, black pepper, sun-dried tomato, sourdough croutons & anchovy, our own Caesar dressing, with herb grilled chicken","Lechuga romana, parmesano, pimienta, tomate seco, crutones de masa madre y anchoa, aderezo César casero, con pollo a la parrilla con hierbas")],
+  [z("Garden Salad","Ensalada Garden"),"8.00",z("Fresh salad mix with loads of avocado, red cabbage, cucumber & jalapeño","Mezcla de lechugas frescas con mucho aguacate, col morada, pepino y jalapeño")]]},
+ {n:z("Create Your Salad","Crea tu Ensalada"),p:"$7",note:z("Choose a mix, a protein, one cheese and three fresh ingredients.","Elige una mezcla, una proteína, un queso y tres ingredientes frescos."),i:[
+  [z("Salad Mixes (choose one)","Mezclas (elige una)"),"",z("Cobb · Romaine · Chinois · Arugula","Cobb · Romana · China · Arúgula")],
+  [z("Protein","Proteína"),"2.50–6.00",z("Roasted chicken, grilled chicken, sliced turkey, egg salad or veggie burger","Pollo asado, pollo a la parrilla, pavo, ensalada de huevo o hamburguesa vegetariana")],
+  [z("Cheese (choose one)","Queso (elige uno)"),"",z("Bleu, goat, provolone, Swiss or shaved parmesan","Azul, cabra, provolone, suizo o parmesano")]]},
+ {n:z("Fresh Ingredients","Ingredientes Frescos"),note:z("Choose three · extras $0.50","Elige tres · extras $0.50"),i:[
+  [z("Croutons, tomato, carrot, celery, walnuts, cranberries, olive tapenade, sunflower seeds, sweet peppers, roasted corn, bean sprouts, black olives, red bell peppers, honey roasted peanuts, sun-dried tomatoes, roasted red peppers, garbanzo beans, kalamata olives","Crutones, tomate, zanahoria, apio, nueces, arándanos, tapenade de aceituna, semillas de girasol, pimientos dulces, elote asado, brotes de frijol, aceitunas negras, pimientos rojos, cacahuates con miel, tomates secos, pimientos rojos asados, garbanzos y aceitunas kalamata")],
+  [z("Avocado","Aguacate"),"+2.00"],[z("Bacon","Tocino"),"+1.50"]]}]},
+{id:"drinks",ic:"☕",t:z("Beverages","Bebidas"),g:[
+ {n:z("Coffee & Tea","Café y Té"),i:[
+  ["Deadman’s Reach","2.00",z("Prepared pour-over style by the cup","Preparado por taza, estilo pour-over")],
+  [z("Hot Tea","Té Caliente"),"2.00",z("Various refreshing blends","Variedad de mezclas refrescantes")],
+  [z("From the Espresso Machine","De la Máquina de Espresso"),"",z("Hot or iced espresso, cappuccino, latte, mocha","Espresso, capuchino, latte y moka, calientes o fríos")],
+  [z("20 oz Unsweetened Iced Tea","Té Helado sin Azúcar de 20 oz"),"2.00",z("Raspberry or black · one refill, please","Frambuesa o negro · un refill, por favor")]]}]}
+];
+const LB={"12 oz":"12 oz","16 oz":"16 oz"};
+let L='en';try{L=localStorage.getItem('lang')||(/^es/i.test(navigator.language)?'es':'en')}catch(e){}
+const tx=x=>typeof x==='string'?x:x[L==='es'?1:0];
+function pr(s){return `<div class="pr">${s.split('|').map(x=>{const k=x.lastIndexOf(' ');const v=x.slice(k+1);return `<span class="ch">${k>0?`<i>${x.slice(0,k)}</i>`:''}<b>${v[0]==='+'?'+$'+v.slice(1):'$'+v}</b></span>`}).join('')}</div>`}
+function draw(){
+ document.documentElement.lang=L;
+ document.title=L==='es'?'Cafe Sweet Street · Menú':'Cafe Sweet Street · Menu';
+ document.querySelectorAll('[data-es]').forEach(e=>{if(!e.dataset.en)e.dataset.en=e.innerHTML;e.innerHTML=L==='es'?e.dataset.es:e.dataset.en});
+ const nav=document.getElementById('nav'),m=document.getElementById('menu');
+ nav.innerHTML=`<div class="lang"><button data-l="en" aria-pressed="${L==='en'}">EN</button><button data-l="es" aria-pressed="${L==='es'}">ES</button></div>`+D.map(s=>`<a href="#${s.id}">${s.ic} ${tx(s.t)}</a>`).join('');
+ m.innerHTML=D.map(s=>`<section id="${s.id}"><h2>${s.ic} ${tx(s.t)}</h2><div class="cols">`+s.g.map(g=>`<div class="cd"><h3><span>${tx(g.n)}</span>${g.p?`<em>${tx(g.p)}</em>`:''}</h3>${g.note?`<p class="nt">${tx(g.note)}</p>`:''}`+g.i.map(i=>`<div class="it"><div><div class="nm">${tx(i[0])}</div>${i[2]?`<div class="ds">${tx(i[2])}</div>`:''}</div>${i[1]?`<div class="pw">${pr(i[1])}</div>`:''}</div>`).join('')+`</div>`).join('')+`</div></section>`).join('');
+}
+document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-l]');if(b){L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(x){}draw()}});
+draw();
+</script>
+</body>
+</html>
